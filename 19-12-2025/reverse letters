@@ -1,0 +1,10 @@
+class Solution:
+    def reverseOnlyLetters(self, s: str) -> str:
+        letters = [char for char in s if char.isalpha()]
+        letters.reverse()
+        letter_iter = iter(letters)
+
+        result = ''.join(next(letter_iter) if char.isalpha() else char for char in s)
+        
+        return result  
+        
